@@ -45,7 +45,7 @@ function encrypt(text, key) {
     var keyIdx = 0;
 
     for(var i = 0; i < text.length; i++) {
-        var keyIndex = letters.indexOf(key[keyIdx]) + 1;
+        var keyIndex = letters.indexOf(key[keyIdx]);
         var index = letters.indexOf(text[i]);
         var newIndex = (index + parseInt(keyIndex)) % 35;
         
@@ -70,7 +70,7 @@ function decrypt(text, key) {
     var keyIdx = 0;
 
     for(var i = 0; i < text.length; i++) {
-        var keyIndex = letters.indexOf(key[keyIdx]) + 1;
+        var keyIndex = letters.indexOf(key[keyIdx]);
         var index = letters.indexOf(text[i]);
         var newIndex = (index - parseInt(keyIndex)) % 35;
 
